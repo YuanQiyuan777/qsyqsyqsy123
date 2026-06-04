@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bubble Tea and Student Life in Singapore</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fffaf5;
+    color:#333;
+}
+
+header{
+    background:#c89b7b;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    margin-top:15px;
+    font-size:1.2rem;
+}
+
+nav{
+    background:white;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a{
+    margin:0 15px;
+    text-decoration:none;
+    color:#8b5e3c;
+    font-weight:bold;
+}
+
+section{
+    padding:60px 10%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#8b5e3c;
+}
+
+.card-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:300px;
+    max-width:100%;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.video{
+    display:flex;
+    justify-content:center;
+}
+
+iframe{
+    border-radius:15px;
+    max-width:100%;
+}
+
+.button-area{
+    text-align:center;
+    margin-top:30px;
+}
+
+.button{
+    display:inline-block;
+    padding:15px 25px;
+    margin:10px;
+    background:#c89b7b;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.button:hover{
+    background:#8b5e3c;
+}
+
+footer{
+    background:#c89b7b;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ── CHATBOT ── */
+#chatbot {
+    background: #fff5ec;
+}
+
+.chatbot-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.chat-window {
+    background: white;
+    border-radius: 15px;
+    border: 2px solid #e8d0ba;
+    height: 360px;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.chat-bubble {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+.chat-bubble.bot {
+    background: #f5e6d8;
+    color: #5a3820;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.chat-bubble.user {
+    background: #c89b7b;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.chat-input-row {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input-row input {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 50px;
+    border: 2px solid #c89b7b;
+    font-size: 0.95rem;
+    outline: none;
+    background: white;
+    color: #333;
+    transition: border-color 0.2s;
+}
+
+.chat-input-row input:focus {
+    border-color: #8b5e3c;
+}
+
+.chat-input-row button {
+    padding: 12px 24px;
+    background: #c89b7b;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.chat-input-row button:hover {
+    background: #8b5e3c;
+}
+
+.suggestions {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.suggestion-btn {
+    padding: 6px 14px;
+    background: white;
+    border: 1.5px solid #c89b7b;
+    border-radius: 50px;
+    color: #8b5e3c;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.suggestion-btn:hover {
+    background: #c89b7b;
+    color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Bubble Tea and Student Life in Singapore</h1>
+    <p>Exploring how bubble tea has become part of student culture and daily life.</p >
+</header>
+
+<nav>
+    <a href=" ">About</a >
+    <a href="#interactive">Interactive Video</a >
+    <a href="#milktea">Milk Tea</a >
+    <a href="#fruittea">Fruit Tea</a >
+    <a href="#lifestyle">Student Life</a >
+    <a href="#chatbot">Chatbot</a >
+</nav>
+
+<section id="about">
+    <h2>About This Project</h2>
+    <p style="text-align:center; max-width:800px; margin:auto; line-height:1.8;">
+        This project explores how bubble tea has become an important part of student life in Singapore.
+        Many students enjoy bubble tea after class as a way to relax, socialise, and take a break from studying.
+        Through interactive videos, users can explore different bubble tea choices and learn about student lifestyle and drink culture.
+    </p >
+</section>
+
+<section id="interactive">
+    <h2>Interactive Experience</h2>
+    <div class="video">
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/prA9vVcRxAI?rel=0&modestbranding=1"
+            title="Intro Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    <div class="button-area">
+        <a href="#milktea" class="button">🧋 Choose Milk Tea</a >
+        <a href="#fruittea" class="button">🍓 Choose Fruit Tea</a >
+    </div>
+</section>
+
+<section id="milktea">
+    <h2>Milk Tea Experience</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Classic Milk Tea</h3>
+            <p>
+                Milk tea is one of the most popular bubble tea choices among students.
+                It is sweet, creamy, and comforting after a long day of classes.
+            </p >
+            <br>
+            <iframe width="250" height="450"
+                src="https://www.youtube.com/embed/-pT3psrKOek?rel=0&modestbranding=1"
+                title="Milk Tea Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<section id="fruittea">
+    <h2>Fruit Tea Experience</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Fresh Fruit Tea</h3>
+            <p>
+                Fruit tea is refreshing and colourful.
+                Many students enjoy it because it feels lighter and is perfect for Singapore's warm weather.
+            </p >
+            <br>
+            <iframe width="250" height="450"
+                src="https://www.youtube.com/embed/kHg_EQKr_5c?rel=0&modestbranding=1"
+                title="Fruit Tea Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<section id="lifestyle">
+    <h2>Student Lifestyle</h2>
+    <p style="text-align:center; max-width:800px; margin:auto; line-height:1.8;">
+        Bubble tea is more than just a drink.
+        It has become part of student culture in Singapore. Students often buy bubble tea after class,
+        during study sessions, or when spending time with friends. Through these daily experiences,
+        bubble tea connects food culture, social interaction, and student life.
+    </p >
+</section>
+
+<!-- CHATBOT SECTION -->
+<section id="chatbot">
+    <h2>💬 Project Chatbot</h2>
+    <div class="chatbot-container">
+
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-bubble bot">
+                Hi! 👋 I'm the Bubble Tea Bot. Ask me anything about this project — bubble tea, student life, or how this website was made!
+            </div>
+        </div>
+
+        <div class="chat-input-row">
+            <input type="text" id="userInput" placeholder="Type your question here...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+        <div class="suggestions">
+            <strong style="font-size:0.85rem;color:#8b5e3c;width:100%;margin-bottom:4px;">Try asking:</strong>
+            <button class="suggestion-btn" onclick="askSuggestion('What is this project about?')">What is this project about?</button>
+            <button class="suggestion-btn" onclick="askSuggestion('What is milk tea?')">What is milk tea?</button>
+            <button class="suggestion-btn" onclick="askSuggestion('What is fruit tea?')">What is fruit tea?</button>
+            <button class="suggestion-btn" onclick="askSuggestion('Why do students like bubble tea?')">Why do students like bubble tea?</button>
+            <button class="suggestion-btn" onclick="askSuggestion('What tools were used?')">What tools were used?</button>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>CMNS2016 Final Project | Bubble Tea and Student Life in Singapore</p >
+</footer>
+
+<script>
+
+const qa = [
+    {
+        keywords: ["topic", "about", "project", "what is"],
+        answer: "This project is about Bubble Tea and Student Life in Singapore. It explores how bubble tea has become part of student culture and daily life."
+    },
+    {
+        keywords: ["purpose", "goal", "aim", "why"],
+        answer: "The purpose is to explore how bubble tea connects students socially and reflects youth culture in Singapore."
+    },
+    {
+        keywords: ["audience", "who", "target"],
+        answer: "The target audience is students, young adults, and anyone interested in Singapore food culture."
+    },
+    {
+        keywords: ["milk tea", "milktea"],
+        answer: "Milk tea is one of the most popular bubble tea choices among students. It is sweet, creamy, and comforting — perfect after a long day of classes."
+    },
+    {
+        keywords: ["fruit tea", "fruittea"],
+        answer: "Fruit tea is refreshing and colourful. Many students enjoy it because it feels lighter and is perfect for Singapore's warm weather."
+    },
+    {
+        keywords: ["boba", "bubble tea", "bubbletea", "what is bubble"],
+        answer: "Bubble tea is a drink that originated in Taiwan and typically includes tea, milk or fruit, and chewy tapioca pearls at the bottom."
+    },
+    {
+        keywords: ["student life", "students", "after class"],
+        answer: "Many students enjoy bubble tea after class as a way to relax, socialise, and reward themselves after a long day of studying."
+    },
+    {
+        keywords: ["culture", "lifestyle"],
+        answer: "Bubble tea has become deeply embedded in Singapore's youth culture. It is a social drink that brings students together in everyday life."
+    },
+    {
+        keywords: ["popular", "favourite", "favorite", "most popular"],
+        answer: "Milk tea with pearls is the most popular choice among students, but fruit teas like lychee and strawberry are also very well-loved."
+    },
+    {
+        keywords: ["social", "together", "friends"],
+        answer: "Bubble tea often acts as a social connector — students buy it together after class, during study sessions, or when hanging out with friends."
+    },
+    {
+        keywords: ["weather", "singapore", "hot", "climate"],
+        answer: "Singapore's warm and humid weather makes cold drinks like fruit tea and iced milk tea especially popular among students."
+    },
+    {
+        keywords: ["interactive", "choose", "video", "experience"],
+        answer: "The interactive section lets users choose between Milk Tea and Fruit Tea experiences, each linked to a short video that shows student life."
+    },
+    {
+        keywords: ["how many video", "videos", "how many"],
+        answer: "The website contains three videos: one introduction video and two experience videos — one for milk tea and one for fruit tea."
+    },
+    {
+        keywords: ["tool", "software", "made with", "built", "technology"],
+        answer: "This website was built using HTML, CSS, and JavaScript. The videos were filmed and edited using CapCut, and visuals were designed with Canva."
+    },
+    {
+        keywords: ["challenge", "difficult", "hard", "problem"],
+        answer: "One of the biggest challenges was filming and editing the videos to make them feel natural and relatable to students."
+    },
+    {
+        keywords: ["design", "colour", "color", "style"],
+        answer: "The design uses warm brown and cream tones inspired by the colour of milk tea, creating a cosy and inviting feel."
+    },
+    {
+        keywords: ["learn", "learned", "skill"],
+        answer: "Through this project, I learned web design, multimedia storytelling, and how to present research in an engaging interactive format."
+    },
+    {
+        keywords: ["improve", "future", "next time", "change"],
+        answer: "In the future, I would add more drink categories, user ratings, and a map showing popular bubble tea shops near schools in Singapore."
+    },
+    {
+        keywords: ["meaning", "significance", "important", "why bubble tea"],
+        answer: "Bubble tea is significant because it represents how food and drink can shape social identity and daily habits among young people."
+    },
+    {
+        keywords: ["course", "class", "module", "cmns", "subject"],
+        answer: "This project was created for CMNS2016, a module that explores digital media and communication through multimedia storytelling."
+    }
+];
+
+function findAnswer(input) {
+    const q = input.toLowerCase();
+    for (let item of qa) {
+        for (let keyword of item.keywords) {
+            if (q.includes(keyword)) {
+                return item.answer;
+            }
+        }
+    }
+    return "I'm not sure about that! Try asking about: milk tea, fruit tea, student life, the design, the tools used, or the purpose of this project. 🧋";
+}
+
+function addBubble(text, type) {
+    const window = document.getElementById("chatWindow");
+    const bubble = document.createElement("div");
+    bubble.className = "chat-bubble " + type;
+    bubble.textContent = text;
+    window.appendChild(bubble);
+    window.scrollTop = window.scrollHeight;
+}
+
+function sendMessage() {
+    const input = document.getElementById("userInput");
+    const text = input.value.trim();
+    if (!text) return;
+
+    addBubble(text, "user");
+    input.value = "";
+
+    setTimeout(() => {
+        const answer = findAnswer(text);
+        addBubble(answer, "bot");
+    }, 400);
+}
+
+function askSuggestion(text) {
+    document.getElementById("userInput").value = text;
+    sendMessage();
+}
+
+document.getElementById("userInput").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") sendMessage();
+});
+
+</script>
+
+</body>
+</html>
